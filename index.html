@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f751a08d34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="container padding">
+      <div class="shadow p-3 rounded border border-2 border-dark">
+        <div class="color">
+          <form class="enter-city-form" id="enter-city-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  id="city-input"
+                  class="form-control"
+                  placeholder="Enter City"
+                  required
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="search btn btn-primary shadow-sm"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <h1 id="city">Raleigh, NC</h1>
+          <div class="row mainInfo">
+            <div class="col-8">
+              <ul>
+                <div class="dateBold">
+                  <li>Today is <span id="date">?</span></li>
+                </div>
+                <li>Partly Cloudy</li>
+                <li>Humidity: 77%</li>
+                <li>Wind: 8 m/h</li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <h2>
+                <span class="temp" id="temp"> 50 </span>
+                <div class="small">
+                  <span class="degrees" id="degrees">
+                    <a href="#" id="celsius-link">°F</a> |
+                    <a href="#" id="fahrenheit-link"> °C</a>
+                  </span>
+                </div>
+              </h2>
+            </div>
+          </div>
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Tomorrow</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="col-4">
+                  <h4>83° F/64° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Wednesday</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div class="col-4">
+                  <h4>84° F/52° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Thursday</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+                <div class="col-4">
+                  <h4>84° F/52° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Friday</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-cloud-showers-heavy"></i>
+                </div>
+                <div class="col-4">
+                  <h4>84° F/52° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Saturday</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-cloud-bolt"></i>
+                </div>
+                <div class="col-4">
+                  <h4>84° F/52° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br / >
+          <div class="card border border-2 border-dark">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <h4>Sunday</h4>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-cloud-bolt"></i>
+                </div>
+                <div class="col-4">
+                  <h4>84° F/52° F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+body {
+  background-color: #92b6f4;
+}
+.padding {
+  padding: 50px;
+  max-width: 750px;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #293241;
+  margin: 20px 0px 0px 0px;
+}
+h2 {
+  font-size: 60px;
+}
+ul {
+  list-style: none;
+  padding: 5px;
+}
+.mainInfo {
+  margin: 30px;
+}
+.dateBold {
+  font-weight: bold;
+}
+.small {
+  font-size: 20px;
+  line-height: 1;
+  display: inline;
+}
+a:link {
+  color: rgb(0, 30, 165);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: (0, 30, 165);
+  background-color: transparent;
+  text-decoration: none;
+}
+.p-3,
+.color,
+.card {
+  background-color: #e0fbfc;
+}
+.card {
+  font-family: Georgia;
+}
+.fa-solid {
+  font-size: 50px;
+}
+.fa-sun {
+  color: rgb(236, 227, 123);
+}
+.fa-cloud {
+  color: rgb(189, 189, 189);
+}
+.fa-cloud-sun {
+  color: rgb(206, 204, 171);
+}
+.fa-cloud-showers-heavy {
+  color: rgb(0, 157, 255);
+}
+.fa-cloud-bolt {
+  color: rgb(11, 140, 196);
+}
