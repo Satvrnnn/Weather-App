@@ -1,3 +1,34 @@
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+}
+
+function searchCity(city) {
+  let units = "imperial";
+  let apiKey = "9ce3163e86b1e166f806b952577f6acd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+let searchForm = document.querySelector("#enter-city-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("New York");
+
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -28,16 +59,6 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 
 dateElement.innerHTML = formatDate(currentTime);
-
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  cityElement.innerHTML = cityInput.value;
-}
-
-let searchForm = document.querySelector("#enter-city-form");
-searchForm.addEventListener("submit", search);
 
 function convertToF(event) {
   event.preventDefault();
