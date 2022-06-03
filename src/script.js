@@ -29,6 +29,20 @@ searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("New York");
 
+function searchLocation(position) {
+  let apiKey = "9ce3163e86b1e166f806b952577f6acd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentWeather(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", getCurrentWeather);
+
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
