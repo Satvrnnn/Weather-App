@@ -1,8 +1,8 @@
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -12,7 +12,7 @@ function displayWeatherCondition(response) {
 }
 
 function searchCity(city) {
-  let units = "imperial";
+  let units = "metric";
   let apiKey = "9ce3163e86b1e166f806b952577f6acd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -76,15 +76,18 @@ dateElement.innerHTML = formatDate(currentTime);
 
 function convertToF(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = 10;
+  let farTemp = document.querySelector("#temp");
+  let farElement = (celsiusTemperature * 9) / 5 + 32;
+  farTemp.innerHTML = Math.round(farElement);
 }
 
 function convertToC(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = 50;
+  let celTemp = document.querySelector("#temp");
+  celTemp.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToF);
