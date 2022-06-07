@@ -54,26 +54,8 @@ a:visited {
 .p-3,
 .color,
 .card {
-  background-color: #e0fbfc;
+  background-color: #dbdbdb;
 }
 .card {
   font-family: Georgia;
-}
-.fa-solid {
-  font-size: 50px;
-}
-.fa-sun {
-  color: rgb(236, 227, 123);
-}
-.fa-cloud {
-  color: rgb(189, 189, 189);
-}
-.fa-cloud-sun {
-  color: rgb(206, 204, 171);
-}
-.fa-cloud-showers-heavy {
-  color: rgb(0, 157, 255);
-}
-.fa-cloud-bolt {
-  color: rgb(11, 140, 196);
 }
